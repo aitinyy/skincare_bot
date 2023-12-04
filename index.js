@@ -48,6 +48,18 @@ app.post("/echo", function(req, res){
         }
         else{
             speech = '¿Disculpa?';
+
+            return res.json({
+                "fulfillmentText": speech,
+                "fulfillmentMessages": [
+                    {
+                        "text": {
+                            "text": [speech]
+                        }
+                    }
+                ],
+                "source": "<webhookpn1>"
+            });
         }
     }
 
