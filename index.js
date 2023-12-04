@@ -45,6 +45,11 @@ app.post("/echo", function(req, res){
             var makeupType=req.body.queryResult.parameters.coverSkin;
             manageCoveringSkin(makeupType);
             //gestionar 
+        }else if(req.body.queryResult.parameters.enhanceBeauty){
+            //zona maquillaje covertor
+            var makeupType2=req.body.queryResult.parameters.enhanceBeauty;
+            manageEnhancingBeauty(makeupType2);
+            //gestionar 
         }
         else{
             speech = '¿Disculpa?';
@@ -430,23 +435,51 @@ app.post("/echo", function(req, res){
 
     function manageCoveringSkin(makeupType){
         switch (makeupType){
-        case 'Base':
-            speech = 'Hablamos de la base';
-            break;
-        case 'Primer':
-            speech = 'Hablamos del primer';
-            break;
-        case 'Cubrir':
-            speech = 'Hablamos de cubrir bello';
-            break;
-        case 'Corrector':
-            speech = 'Hablamos de los correctores';
-            break;
-        default:
-            speech = '¿Disculpa?';
-            break;
+            case 'Base':
+                speech = 'Hablamos de la base';
+                break;
+            case 'Primer':
+                speech = 'Hablamos del primer';
+                break;
+            case 'Cubrir':
+                speech = 'Hablamos de cubrir bello';
+                break;
+            case 'Corrector':
+                speech = 'Hablamos de los correctores';
+                break;
+            default:
+                speech = '¿Disculpa?';
+                break;
         }
 
+        return res.json({
+            "fulfillmentText": speech,
+            "fulfillmentMessages": [
+                {
+                    "text": {
+                        "text": [speech]
+                    }
+                }
+            ],
+            "source": "<webhookpn1>"
+        });
+
+    }
+
+    function manageEnhancingBeauty(makeupType2){
+
+        switch (makeupType2){
+            case 'Colorete':
+                speech = 'Hablamos del colorete';
+                break;
+            case 'Bronceador':
+                speech = 'Hablamos del bronceador';
+                break;
+            default:
+                speech = '¿Disculpa?';
+                break;
+        }
+    
         return res.json({
             "fulfillmentText": speech,
             "fulfillmentMessages": [
