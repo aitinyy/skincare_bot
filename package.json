@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Aitana Sempere",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",

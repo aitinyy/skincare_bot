@@ -1,6 +1,6 @@
 {
-    "name": "SkincareBot",
-    "description": "SkincareBot",
+    "name": "Webhook",
+    "description": "Webhook",
     "repository": "https://github.com/aitinyy/skincare_bot.git",
     "keywords": ["api.ai", "dialogflow", "skincare"]
 }
