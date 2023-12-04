@@ -446,6 +446,19 @@ app.post("/echo", function(req, res){
             speech = '¿Disculpa?';
             break;
         }
+
+        return res.json({
+            "fulfillmentText": speech,
+            "fulfillmentMessages": [
+                {
+                    "text": {
+                        "text": [speech]
+                    }
+                }
+            ],
+            "source": "<webhookpn1>"
+        });
+
     }
 
 });
