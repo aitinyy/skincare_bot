@@ -312,20 +312,20 @@ app.post("/echo", function(req, res){
 
     function decideMoisturizer(){
 
-        speech = 'En función de tus necesidades, he seleccionado una crema hidratante para ti.';
+        speech = 'En función de tus necesidades, he seleccionado un tipo de crema hidratante para ti.';
 
         switch(typeSkin){
         case 1:
-            speech = speech+' Crema hidratante para piel normal';
+            speech = speech+' Una crema que sea ligera pero que al mismo tiempo retenga la hidratación. Ingredientes que buscar son la niacinamida y ceramidas, y si se encuentran las dos en el mismo producto mejor.';
             break;
         case 2:
-            speech = speech+' Crema hidratante para piel seca';
+            speech = speech+' Para ti sería adecuado una crema que se sienta grusa y muy hidratante. Ingredientes como las ceramidas son ideales para tu piel.';
             break;
         case 3:
-            speech = speech+' Crema hidratante para piel grasa';
+            speech = speech+' Una crema ligera es lo ideal para ti. Sería idóneo que tuviera propiedades que le permitan regular la producción de sebo, con ingredientes como la niacinamida';
             break;
         case 4:
-            speech = speech+' Crema hidratante para piel sensible';
+            speech = speech+' Deberías usar una crema que sea muy sencilla, con pocos ingredientes y ningún activo. Evita en todo momento ingredientes como fragancias.';
             break;
         default:
             speech = speech+' Crema hidratante para piel default';
