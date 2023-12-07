@@ -107,14 +107,14 @@ app.post("/echo", function(req, res){
         var infoCallBack = '';
 
         if(statusWash=='removeMakeup'){
-            informationText = 'Es importante quitar el maquillaje correctamente. Se recomiendan los aceites desmaquillantes ya que son muy eficaces a la hora de deshacer la suciedad y el maquillaje. Una alternativa menos grasienta es el agua micelar.';
+            informationText = 'Es importante quitar el maquillaje correctamente. Se recomiendan los aceites desmaquillantes ya que son muy eficaces a la hora de disolver la suciedad y el maquillaje. Una alternativa menos grasienta es el agua micelar.';
             buttonCallBack = 'washFace';
-            infoCallBack = '¿Qué jabón debería utilizar?';
+            infoCallBack = '¿Qué jabón debería utilizar después?';
         }
         else{
-            informationText = 'lavamos la cara';
+            informationText = '¡Usar un jabón de limpieza es esencial! Deberías buscar uno que haga sentir bien a tu piel, en ningún momento debería sentirse tirante. Si tienes la piel un poco más grasa te vas a benificiar de los jabones en gel, de lo contrario uno que sea espumoso va a hacer su trabajo.';
             buttonCallBack = 'skinConcern';
-            infoCallBack = 'que preocupación tienes';
+            infoCallBack = '¿Y si quiero tratar algo en concreto?';
         } 
 
         return res.json({
