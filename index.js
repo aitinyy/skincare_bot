@@ -147,7 +147,7 @@ app.post("/echo", function(req, res){
         //speech = 'la preocupacion es '+req.body.queryResult.parameters.skinConcern;
         var concern = req.body.queryResult.parameters.skinConcern;
         var moreConcern = ' ¿Tienes alguna preocupación más?';
-        var moreThanOne = ' Ten cuidado al tratar varios productos, primero por separado.';
+        var moreThanOne = ' Ten cuidado al tratar varios productos, primero pruebalos por separado.';
         var alreadyDone = false;
 
         speech = adjustConcern(concern);
@@ -312,23 +312,23 @@ app.post("/echo", function(req, res){
 
     function decideMoisturizer(){
 
-        speech = 'Seleccionamos tipo de moisturizer';
+        speech = 'En función de tus necesidades, he seleccionado una crema hidratante para ti.';
 
         switch(typeSkin){
         case 1:
-            speech = 'Crema hidratante para piel normal';
+            speech = speech+' Crema hidratante para piel normal';
             break;
         case 2:
-            speech = 'Crema hidratante para piel seca';
+            speech = speech+' Crema hidratante para piel seca';
             break;
         case 3:
-            speech = 'Crema hidratante para piel grasa';
+            speech = speech+' Crema hidratante para piel grasa';
             break;
         case 4:
-            speech = 'Crema hidratante para piel sensible';
+            speech = speech+' Crema hidratante para piel sensible';
             break;
         default:
-            speech = 'Crema hidratante para piel default';
+            speech = speech+' Crema hidratante para piel default';
             break;
         }
 
