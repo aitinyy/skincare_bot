@@ -342,7 +342,7 @@ app.post("/echo", function(req, res){
                     "inline_keyboard": [
                     [
                         {
-                        "text": 'Crema solar',
+                        "text": 'Último paso, crema solar',
                         "callback_data": 'addSunscreen'
                         }
                     ]
@@ -362,24 +362,16 @@ app.post("/echo", function(req, res){
 
     function selectSunscreen(){
 
-        speech = 'Crema solar final';
+        speech = 'En general el uso de crema solar diario te va a ser muy beneficioso, tanto para protegerse del sol como prevenir multiples condiciones cutáneas.';
+        speech = speech + 'Una crema solar que sea hidratante y suave es lo que debes buscar.';
 
         switch(typeSkin){
-        case 1:
-            speech = 'Crema solar para piel normal';
-            break;
-        case 2:
-            speech = 'Crema solar para piel seca';
-            break;
-        case 3:
-            speech = 'Crema solar para piel grasa';
-            break;
-        case 4:
-            speech = 'Crema solar para piel sensible';
-            break;
-        default:
-            speech = 'Crema solar para piel default';
-            break;
+            case 3:
+                speech = speech + ' Si tu piel se siente muy grasa, puedes saltarte (en algunas ocasiones) la crema hidratante y utilizar únicamente crema solar.';
+                break;
+            case 4:
+                speech = speech + ' Compueba que no tenga muchos productos y que sea adecuada para una piel sensible';
+                break;
         }
 
         return res.json({
