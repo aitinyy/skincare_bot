@@ -107,9 +107,9 @@ app.post("/echo", function(req, res){
         var infoCallBack = '';
 
         if(statusWash=='removeMakeup'){
-            informationText = 'quitamos maquillaje';
+            informationText = 'Es importante quitar el maquillaje correctamente. Se recomiendan los aceites desmaquillantes ya que son muy eficaces a la hora de deshacer la suciedad y el maquillaje. Una alternativa menos grasienta es el agua micelar.';
             buttonCallBack = 'washFace';
-            infoCallBack = 'lavamos cara';
+            infoCallBack = '¿Qué jabón debería utilizar?';
         }
         else{
             informationText = 'lavamos la cara';
