@@ -203,28 +203,28 @@ app.post("/echo", function(req, res){
 
         switch (concern){
         case 'Acné':
-            speech = 'Producto para acné';
+            speech = 'Podrías añadir a tu rutina algún exfoliante que contenga ácido salicílico (BHA) y/o serum que contenga niacinamida.';
             break;
         case 'Manchas en la piel':
-            speech = 'Producto para las manchas';
+            speech = 'Considera utilizar algún exfoliante AHA, cómo ácido glicólico (el más irritante pero más efectivo) o ácido láctico (punto intermedio) o ácido mandélico (el más suave pero menos efectivo).';
             break;
         case 'Arrugas':
-            speech = 'Producto para las arrugas';
+            speech = 'Si quieres tratarlo de forma ligera y suave, el ácido hialurónico es ideal. Lo más efectivo son productos que contengan retinol, pero OJO puede ser un poco irritante, hay que usarlo muy poco a poco.';
             break;
         case 'Poros':
-            speech = 'Producto para los poros';
+            speech = 'En este caso un exfoliante que contenga ácido salicílico es lo idóneo.';
             break;
         case 'Piel sensible':
-            speech = 'Producto para la piel sensible';
+            speech = 'En este caso se trata de evitar productos. No utilices ingredientes irritantes como ácido glicólico, ácido salicílico o ácido láctico. Evita los exofoliantes físicos, que son aquellos que contienen pequeñas particulas que se restregan por la piel. También deberías evitar los productos que contengan fragancia y aquellos que contengan alcohol (Aunque no todos los alcoholes son irritantes).';
             break;
         case 'Piel muy seca':
-            speech = 'Producto para la piel muy seca';
+            speech = 'Convienen productos que contengan ceramidas, aceite de jojoba o manteca de karité. Ten en cuenta que este último ingrediente puede ser muy denso y puede obstruir poros, sin embargo, es muy hidratante.';
             break;
         case 'Piel grasa':
-            speech = 'Producto para la piel grasa';
+            speech = 'Exfoliantes que contengan ácido salicílico ayudan mucho con esta condición ya que disuelven el exceso de sebo. Por otro lado, la niacinamida ayuda a regular la producción de sebo, por lo que también es muy conveniente.';
             break;
         case 'Textura en la piel':
-            speech = 'Producto para la textura en la piel';
+            speech = 'Cuando ocurre este tipo de condición, se recomienda usar ácido glicólico, pero este puede ser un poco irritante. Cómo alternativa está el ácido láctico. Un ingrediente que ayuda con la regeneración de la piel es el retinol, pero si vas a usarlo debes tener precaución.';
             break;
         default:
             speech = '¿Disculpa?';
