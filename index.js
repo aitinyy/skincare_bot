@@ -390,8 +390,19 @@ app.post("/echo", function(req, res){
 
     function manageIngredientsSection(){
 
-        speech = 'Explicamos que es '+req.body.queryResult.parameters.ingredients+'. ';
-        speech += '¿Te interesa conocer algún ingrediente más?';
+        var ingredient = req.body.queryResult.parameters.ingredients;
+
+        switch(ingredient){
+            case 'Vitamina C':
+                speech = 'Es un antioxidante y ayuda a que la piel sufra menos daños. Ayuda con la pigmentación, es decir, facilita la desaparición de manchas o que directamente no aparezcan. También contribuye a la producción de colágeno.';
+                break;
+            default:
+                speech = 'Ups algo ha ido mal';
+                breack;
+        }
+
+        //speech = 'Explicamos que es '+req.body.queryResult.parameters.ingredients+'. ';
+        speech = speech + ' ¿Te interesa conocer algún ingrediente más?';
 
         return res.json({
         "fulfillmentText": speech,
