@@ -1,3 +1,7 @@
+var multipleConcerns = 0;
+var concerns = [];
+var typeSkin = 0;
+
 const resetValues = (concerns, multipleConcerns, typeSkin) => {
     while(concerns.length){
         concerns.pop();
@@ -170,19 +174,19 @@ const moreConcerns = () => {
     var evento = 'SKIN_CONCERN';
 
     return res.json({
-    "fulfillmentText": speech,
-    "fulfillmentMessages": [
-        {
-            "text": {
-                "text": [speech]
+        "fulfillmentText": speech,
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [speech]
+                }
             }
-        }
-    ],
-    "followupEventInput": {
-        "name": evento,
-        "languageCode": "es-ES"
-    },
-    "source": "<webhookpn1>"
+        ],
+        "followupEventInput": {
+            "name": evento,
+            "languageCode": "es-ES"
+        },
+        "source": "<webhookpn1>"
     });
 
 }
