@@ -13,7 +13,7 @@ const webhookRoute = require('./routes/webhook_routes');
 //var router = require('./routes/webhook_routes');
 
 //app.use('/echo', webhookRoute);
-app.use(webhookRoute.router);
+app.use(webhookRoute);
 
 app.listen(process.env.PORT || 8000, function(){
     console.log("Escuchando el puerto");
