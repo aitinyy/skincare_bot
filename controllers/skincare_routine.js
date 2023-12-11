@@ -168,25 +168,6 @@ const adjustConcern = (concern) => {
     return speech;
 }
 
-const moreConcerns = () => {
-
-    var speech = 'Más preocupaciones';
-    //var evento = 'SKIN_CONCERN';
-
-    return res.json({
-        "fulfillmentText": speech,
-        "fulfillmentMessages": [
-            {
-                "text": {
-                    "text": [speech]
-                }
-            }
-        ],
-        "source": "<webhookpn1>"
-    });
-
-}
-
 const updateSkinType = () => {
 
     //0 -> not set
@@ -315,6 +296,29 @@ const selectSunscreen = (req, res) => {
         }
     ],
     "source": "<webhookpn1>"
+    });
+
+}
+
+const moreConcerns = () => {
+
+    var speech = 'Más preocupaciones';
+    var evento = 'SKIN_CONCERN';
+
+    return res.json({
+        "fulfillmentText": speech,
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [speech]
+                }
+            }
+        ],
+        "followupEventInput": {
+            "name": evento,
+            "languageCode": "es-ES"
+        },
+        "source": "<webhookpn1>"
     });
 
 }
