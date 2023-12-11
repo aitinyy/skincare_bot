@@ -23,13 +23,13 @@ router.post("/", function(req, res){
         routineController.updateSkinType(req, res, typeSkin, concerns);
     }else if(req.body.queryResult.parameters.moreConcern){
         //continuacion para mas concerns
-        routineController.moreConcerns();
+        res = routineController.moreConcerns();
     }else if(req.body.queryResult.parameters.decideMoisturizer){
         //decide crema hisdratante
-        routineController.decideMoisturizer(req, res, typeSkin);
+        res = routineController.decideMoisturizer(req, res, typeSkin);
     }else if(req.body.queryResult.parameters.addSunscreen){
         //crema solar, fin rutina
-        routineController.selectSunscreen(req, res, typeSkin);
+        res = routineController.selectSunscreen(req, res, typeSkin);
     }
 
 

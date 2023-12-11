@@ -107,11 +107,11 @@ const selectConcerns = (req, res, concerns, multipleConcerns) => {
                 "inline_keyboard": [
                 [
                     {
-                    "text": 'si',
+                    "text": 'Si',
                     "callback_data": 'si'
                     },
                     {
-                    "text": 'no',
+                    "text": 'No',
                     "callback_data": 'no'
                     },
                 ]
