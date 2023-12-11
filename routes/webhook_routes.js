@@ -19,19 +19,7 @@ router.post("/", function(req, res){
         routineController.updateSkinType();
     }else if(req.body.queryResult.parameters.moreConcern){
         //continuacion para mas concerns
-        //res = routineController.moreConcerns();
-        var speech = 'uwi';
-        return res.json({
-            "fulfillmentText": speech,
-            "fulfillmentMessages": [
-                {
-                    "text": {
-                        "text": [speech]
-                    }
-                }
-            ],
-            "source": "<webhookpn1>"
-        });
+        res = routineController.moreConcerns();
     }else if(req.body.queryResult.parameters.decideMoisturizer){
         //decide crema hisdratante
         res = routineController.decideMoisturizer(req, res);

@@ -182,10 +182,6 @@ const moreConcerns = () => {
                 }
             }
         ],
-        "followupEventInput": {
-            "name": evento,
-            "languageCode": "es-ES"
-        },
         "source": "<webhookpn1>"
     });
 
