@@ -1,6 +1,6 @@
-const multipleConcerns = 0;
-const concerns = [];
-const typeSkin = 0;
+var multipleConcerns = 0;
+var concerns = [];
+var typeSkin = 0;
 
 const resetValues = () => {
     while(concerns.length){
@@ -332,8 +332,5 @@ module.exports = {
     moreConcerns,
     updateSkinType,
     decideMoisturizer,
-    selectSunscreen,
-    multipleConcerns,
-    concerns,
-    typeSkin
+    selectSunscreen
 };
