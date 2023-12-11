@@ -43,7 +43,7 @@ const washFace = (req,res) => {
     var infoCallBack = '';
 
     if(statusWash=='removeMakeup'){
-        informationText = data.messagesData[1][1]['text'];
+        informationText = data.messagesData[1][1]["text"];
         buttonCallBack = 'washFace';
         infoCallBack = '¿Qué jabón debería utilizar después?';
     }
