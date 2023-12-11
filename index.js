@@ -6,12 +6,13 @@ const app = express();
 
 
 //app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json());
 
-const webhookRoute = require('./routes/webhook_routes');
+//const webhookRoute = 
+var router = require('./routes/webhook_routes');
 
-app.use(webhookRoute.router);
+app.use(router);
 
 app.listen(process.env.PORT || 8000, function(){
     console.log("Escuchando el puerto");
