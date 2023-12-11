@@ -4,9 +4,10 @@ const router  = express.Router();
 const routineController = require('../controllers/skincare_routine');
 
 app.post("/echo", function(req, res){
+    var speech = 'Caca';
     if(req.body.queryResult.parameters.startRoutine){
-        var speech = 'Hola';
-
+        speech = 'Hola';
+        response['fulfillmentText'] = message;
         return res.json({
                 "fulfillmentText": speech,
                 "fulfillmentMessages": [
@@ -19,6 +20,18 @@ app.post("/echo", function(req, res){
                 "source": "<webhookpn1>"
             });
     }
+
+    return res.json({
+        "fulfillmentText": 'um',
+        "fulfillmentMessages": [
+            {
+                "text": {
+                    "text": [speech]
+                }
+            }
+        ],
+        "source": "<webhookpn1>"
+    });
 });
 
 module.exports = {
