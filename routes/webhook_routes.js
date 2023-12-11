@@ -4,7 +4,7 @@ const router  = express.Router();
 //const routineController = require('../controllers/skincare_routine');
 
 router.post("/", function(req, res){
-    var speech = 'Caca';
+    var speech = 'Hola buenasss';
     /*if(req.body.queryResult.parameters.startRoutine){
         speech = 'Hola';
         //response['fulfillmentText'] = message;
