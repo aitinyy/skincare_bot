@@ -1,3 +1,4 @@
+const data = require('../database/data');
 
 const manageIngredientsSection = (req, res) => {
 
