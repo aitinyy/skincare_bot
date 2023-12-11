@@ -37,7 +37,7 @@ const messagesData = {
         },
         12:{
             moreThanOne: [' Ten cuidado al tratar varios productos, primero pruébalos por separado.']
-        },
+        }
     }
 }
 
