@@ -191,7 +191,7 @@ const moreConcerns = () => {
 
 }
 
-const updateSkinType = (req, res) => {
+const updateSkinType = () => {
 
     //0 -> not set
     //1 -> mostly normal
