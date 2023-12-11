@@ -5,9 +5,9 @@ const router  = express.Router();
 
 router.post("/", function(req, res){
     var speech = 'Hola buenasss';
-    /*if(req.body.queryResult.parameters.startRoutine){
-        speech = 'Hola';
-        //response['fulfillmentText'] = message;
+    if(req.body.queryResult.parameters.startRoutine){
+        speech = 'Empezamos rutina';
+
         return res.json({
                 "fulfillmentText": speech,
                 "fulfillmentMessages": [
@@ -19,7 +19,7 @@ router.post("/", function(req, res){
                 ],
                 "source": "<webhookpn1>"
             });
-    }*/
+    }
 
     return res.json({
         "fulfillmentText": 'um',
