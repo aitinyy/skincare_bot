@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const routineController = require('../controllers/skincare_routine');
 const ingredientesController = require('../controllers/ingredientes');
+const makeupController = require('../controllers/makeup');
 
 
 router.post("/", function(req, res){
@@ -29,6 +30,29 @@ router.post("/", function(req, res){
     }else if(req.body.queryResult.parameters.ingredients){
         //zona de ingredientes
         res = ingredientesController.manageIngredientsSection(req, res);
+    }else if(req.body.queryResult.parameters.coverSkin){
+        //zona cubrir maquillaje
+        var makeupType=req.body.queryResult.parameters.coverSkin;
+        makeupController.manageCoveringSkin(req, res, makeupType);
+    }else if(req.body.queryResult.parameters.enhanceBeauty){
+        //zona realzar maquillaje
+        var makeupType2=req.body.queryResult.parameters.enhanceBeauty;
+        makeupController.manageEnhancingBeauty(req, res, makeupType2);
+    }
+    else{
+        var speech = '¿Disculpa?';
+
+        return res.json({
+            "fulfillmentText": speech,
+            "fulfillmentMessages": [
+                {
+                    "text": {
+                        "text": [speech]
+                    }
+                }
+            ],
+            "source": "<webhookpn1>"
+        });
     }
 
 
