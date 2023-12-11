@@ -1,3 +1,11 @@
+const resetValues = (concerns, multipleConcerns, typeSkin) => {
+    while(concerns.length){
+        concerns.pop();
+    }
+    multipleConcerns=0;
+    typeSkin=0;
+}
+
 const manageRoutine = (req,res) => {
 
     var speech = 'Hola caracola';
@@ -16,5 +24,6 @@ const manageRoutine = (req,res) => {
 };
 
 module.exports = {
+    resetValues,
     manageRoutine
 };
