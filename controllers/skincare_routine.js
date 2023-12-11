@@ -73,8 +73,119 @@ const washFace = (req,res) => {
     });
 }
 
+const selectConcerns = (req, res, concerns, multipleConcerns) => {
+
+    var concern = req.body.queryResult.parameters.skinConcern;
+    var moreConcern = ' ¿Tienes alguna preocupación más?';
+    var moreThanOne = ' Ten cuidado al tratar varios productos, primero pruebalos por separado.';
+    var alreadyDone = false;
+
+    speech = adjustConcern(concern);
+
+    concerns.forEach(element => {
+    if(element==concern)
+        alreadyDone = true;
+    });
+
+    if(!alreadyDone){
+        if(multipleConcerns>0){
+            speech +=moreThanOne; 
+        }
+        multipleConcerns = multipleConcerns +1;
+        concerns.push(concern);
+    }else{
+        speech = 'Esta preocupación ya la has dicho.';
+    }
+
+    return res.json({
+    "fulfillmentText": speech,
+    "fulfillmentMessages": [
+        {
+        "payload": {
+            "telegram": {
+            "reply_markup": {
+                "inline_keyboard": [
+                [
+                    {
+                    "text": 'si',
+                    "callback_data": 'si'
+                    },
+                    {
+                    "text": 'no',
+                    "callback_data": 'no'
+                    },
+                ]
+                ]
+            },
+            "text": speech+moreConcern,
+            }
+            
+        },
+        "platform": "TELEGRAM"
+        }
+    ],  
+    "source": "<webhookpn1>"
+    });
+}
+
+const updateSkinType = (req, res, typeSkin, concerns) => {
+
+    //0 -> not set
+    //1 -> mostly normal
+    //2 -> mostly dry
+    //3 -> mostly oily
+    //4 -> mostly sensitive
+    var sensitive = false;
+    var auxType = 0;
+
+    concerns.forEach(element => {
+        switch(element){
+            case 'Piel muy seca':
+                typeSkin = 2;
+                break;
+            case 'Piel grasa':
+                typeSkin = 3;
+                break;
+            case 'Piel sensible':
+                typeSkin = 4;
+                sensitive = true;
+                break;
+            default:
+                typeSkin = 1;
+                break;
+        }
+    });
+
+    if(sensitive)
+        typeSkin=4;
+
+    concerns.forEach(element => {
+        switch(element){
+            case 'Acné':
+            case 'Poros':
+            case 'Textura en la piel':
+                if(auxType<=3)
+                    auxType=3;
+                break;
+            case 'Manchas en la piel':
+                auxType=4;
+                break;
+            case 'Arrugas':
+                if(auxType<=2)
+                    auxType=2;
+                break;
+        }
+    });
+
+    if(typeSkin<auxType)
+        typeSkin=auxType;
+
+}
+
 module.exports = {
     resetValues,
     manageRoutine,
-    washFace
+    washFace,
+    selectConcerns,
+    updateSkinType
 };
