@@ -226,23 +226,23 @@ const updateSkinType = () => {
 
 const decideMoisturizer = (req, res) => {
 
-    var speech = 'En función de tus necesidades, he seleccionado un tipo de crema hidratante para ti.';
+    var speech = data.messagesData[1][13]["text"];
 
     switch(typeSkin){
     case 1:
-        speech = speech+' Una crema que sea ligera pero que al mismo tiempo retenga la hidratación. Ingredientes que buscar son la niacinamida y ceramidas, y si se encuentran las dos en el mismo producto mejor.';
+        speech = speech+data.messagesData[1][14]["text"];
         break;
     case 2:
-        speech = speech+' Para ti sería adecuado una crema que se sienta grusa y muy hidratante. Ingredientes como las ceramidas son ideales para tu piel.';
+        speech = speech+data.messagesData[1][15]["text"];
         break;
     case 3:
-        speech = speech+' Una crema ligera es lo ideal para ti. Sería idóneo que tuviera propiedades que le permitan regular la producción de sebo, con ingredientes como la niacinamida';
+        speech = speech+data.messagesData[1][16]["text"];
         break;
     case 4:
-        speech = speech+' Deberías usar una crema que sea muy sencilla, con pocos ingredientes y ningún activo. Evita en todo momento ingredientes como fragancias.';
+        speech = speech+data.messagesData[1][17]["text"];
         break;
     default:
-        speech = speech+' Crema hidratante para piel default';
+        speech = speech+data.messagesData[1][14]["text"];
         break;
     }
 
@@ -276,15 +276,15 @@ const decideMoisturizer = (req, res) => {
 
 const selectSunscreen = (req, res) => {
 
-    var speech = 'En general el uso de crema solar diario te va a ser muy beneficioso, tanto para protegerse del sol como prevenir multiples condiciones cutáneas.';
-    speech = speech + 'Una crema solar que sea hidratante y suave es lo que debes buscar.';
+    var speech = data.messagesData[1][18]["text"];
+    speech = speech + data.messagesData[1][19]["text"];
 
     switch(typeSkin){
         case 3:
-            speech = speech + ' Si tu piel se siente muy grasa, puedes saltarte (en algunas ocasiones) la crema hidratante y utilizar únicamente crema solar.';
+            speech = speech + data.messagesData[1][20]["text"];
             break;
         case 4:
-            speech = speech + ' Compueba que no tenga muchos productos y que sea adecuada para una piel sensible';
+            speech = speech + data.messagesData[1][21]["text"];
             break;
     }
 

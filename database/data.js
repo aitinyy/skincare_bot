@@ -38,6 +38,33 @@ const messagesData = {
         12:{
             moreThanOne: [' Ten cuidado al tratar varios productos, primero pruébalos por separado.']
         },
+        13:{
+            text: ['En función de tus necesidades, he seleccionado un tipo de crema hidratante para ti.']
+        },
+        14:{
+            text: [' Una crema que sea ligera pero que al mismo tiempo retenga la hidratación. Ingredientes que buscar son la niacinamida y ceramidas, y si se encuentran las dos en el mismo producto mejor.']
+        },
+        15:{
+            text: [' Para ti sería adecuado una crema que se sienta grasa y muy hidratante. Ingredientes como las ceramidas son ideales para tu piel.']
+        },
+        16:{
+            text: [' Una crema ligera es lo ideal para ti. Sería idóneo que tuviera propiedades que le permitan regular la producción de sebo, con ingredientes como la niacinamida']
+        },
+        17:{
+            text: [' Deberías usar una crema que sea muy sencilla, con pocos ingredientes y ningún activo. Evita en todo momento ingredientes como fragancias.']
+        },
+        18:{
+            text: ['En general el uso de crema solar diario te va a ser muy beneficioso, tanto para protegerse del sol como prevenir múltiples condiciones cutáneas.']
+        },
+        19:{
+            text: ['Una crema solar que sea hidratante y suave es lo que debes buscar.']
+        },
+        20:{
+            text: [' Si tu piel se siente muy grasa, puedes saltarte (en algunas ocasiones) la crema hidratante y utilizar únicamente crema solar.']
+        },
+        21:{
+            text: [' Comprueba que no tenga muchos productos y que sea adecuada para una piel sensible']
+        }
     }
 }
 
