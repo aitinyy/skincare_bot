@@ -2,7 +2,7 @@ const multipleConcerns = 0;
 const concerns = [];
 const typeSkin = 0;
 
-const resetValues = (concerns, multipleConcerns, typeSkin) => {
+const resetValues = () => {
     while(concerns.length){
         concerns.pop();
     }
@@ -77,7 +77,7 @@ const washFace = (req,res) => {
     });
 }
 
-const selectConcerns = (req, res, concerns, multipleConcerns) => {
+const selectConcerns = (req, res) => {
 
     var concern = req.body.queryResult.parameters.skinConcern;
     var moreConcern = ' ¿Tienes alguna preocupación más?';
@@ -191,7 +191,7 @@ const moreConcerns = () => {
 
 }
 
-const updateSkinType = (req, res, typeSkin, concerns) => {
+const updateSkinType = (req, res) => {
 
     //0 -> not set
     //1 -> mostly normal
@@ -245,7 +245,7 @@ const updateSkinType = (req, res, typeSkin, concerns) => {
 
 }
 
-const decideMoisturizer = (req, res, typeSkin) => {
+const decideMoisturizer = (req, res) => {
 
     var speech = 'En función de tus necesidades, he seleccionado un tipo de crema hidratante para ti.';
 
@@ -295,7 +295,7 @@ const decideMoisturizer = (req, res, typeSkin) => {
 
 }
 
-const selectSunscreen = (req, res, typeSkin) => {
+const selectSunscreen = (req, res) => {
 
     var speech = 'En general el uso de crema solar diario te va a ser muy beneficioso, tanto para protegerse del sol como prevenir multiples condiciones cutáneas.';
     speech = speech + 'Una crema solar que sea hidratante y suave es lo que debes buscar.';
