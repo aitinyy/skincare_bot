@@ -1,6 +1,6 @@
-/*var multipleConcerns = 0;
+var multipleConcerns = 0;
 var concerns = [];
-var typeSkin = 0;*/
+var typeSkin = 0;
 
 const resetValues = () => {
     while(concerns.length){
