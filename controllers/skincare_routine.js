@@ -45,7 +45,7 @@ const washFace = (req,res) => {
     if(statusWash=='removeMakeup'){
         informationText = data.messagesData[1][1]["text"];
         buttonCallBack = 'washFace';
-        infoCallBack = data.messagesData[1][1]["button"];
+        infoCallBack = 'Hola';
     }
     else{
         informationText = data.messagesData[1][2]["text"];
