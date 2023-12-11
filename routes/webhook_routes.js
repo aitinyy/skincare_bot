@@ -21,6 +21,15 @@ router.post("/", function(req, res){
         //precupaciones del usuario
         res = routineController.selectConcerns(req,res,concerns,multipleConcerns);
         routineController.updateSkinType(req, res, typeSkin, concerns);
+    }else if(req.body.queryResult.parameters.moreConcern){
+        //continuacion para mas concerns
+        routineController.moreConcerns();
+    }else if(req.body.queryResult.parameters.decideMoisturizer){
+        //decide crema hisdratante
+        routineController.decideMoisturizer(req, res, typeSkin);
+    }else if(req.body.queryResult.parameters.addSunscreen){
+        //crema solar, fin rutina
+        routineController.selectSunscreen(req, res, typeSkin);
     }
 
 
