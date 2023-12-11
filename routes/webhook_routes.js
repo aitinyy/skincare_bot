@@ -19,24 +19,7 @@ router.post("/", function(req, res){
         routineController.updateSkinType();
     }else if(req.body.queryResult.parameters.moreConcern){
         //continuacion para mas concerns
-        var speech = 'Más preocupaciones';
-        var evento = 'SKIN_CONCERN';
-
-        return res.json({
-            "fulfillmentText": speech,
-            "fulfillmentMessages": [
-                {
-                    "text": {
-                        "text": [speech]
-                    }
-                }
-            ],
-            "followupEventInput": {
-                "name": evento,
-                "languageCode": "es-ES"
-            },
-            "source": "<webhookpn1>"
-        });
+        rs = routineController.moreConcerns(res);
     }else if(req.body.queryResult.parameters.decideMoisturizer){
         //decide crema hisdratante
         res = routineController.decideMoisturizer(req, res);
@@ -45,7 +28,7 @@ router.post("/", function(req, res){
         res = routineController.selectSunscreen(req, res);
     }else if(req.body.queryResult.parameters.ingredients){
         //zona de ingredientes
-        res = ingredientesController.manageIngredientsSection();
+        res = ingredientesController.manageIngredientsSection(req, res);
     }
 
 

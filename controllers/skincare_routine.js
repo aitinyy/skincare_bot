@@ -300,7 +300,7 @@ const selectSunscreen = (req, res) => {
 
 }
 
-const moreConcerns = () => {
+const moreConcerns = (res) => {
 
     var speech = 'Más preocupaciones';
     var evento = 'SKIN_CONCERN';

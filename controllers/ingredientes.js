@@ -1,5 +1,5 @@
 
-const manageIngredientsSection = () => {
+const manageIngredientsSection = (req, res) => {
 
     var speech = '';
     var ingredient = req.body.queryResult.parameters.ingredients;
