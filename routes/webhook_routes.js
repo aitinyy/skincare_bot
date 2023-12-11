@@ -19,7 +19,7 @@ router.post("/", function(req, res){
         res = routineController.washFace(req,res);
     }else if(req.body.queryResult.parameters.skinConcern){
         //precupaciones del usuario
-        routineController.selectConcerns(req,res,concerns,multipleConcerns);
+        res = routineController.selectConcerns(req,res,concerns,multipleConcerns);
         routineController.updateSkinType(req, res, typeSkin, concerns);
     }
 
