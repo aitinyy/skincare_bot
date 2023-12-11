@@ -171,7 +171,7 @@ const adjustConcern = (concern) => {
 const moreConcerns = () => {
 
     var speech = 'Más preocupaciones';
-    var evento = 'SKIN_CONCERN';
+    //var evento = 'SKIN_CONCERN';
 
     return res.json({
         "fulfillmentText": speech,
