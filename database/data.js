@@ -27,7 +27,7 @@ const messagesData = {
             text: ['Convienen productos que contengan ceramidas, aceite de jojoba o manteca de karité. Ten en cuenta que este último ingrediente puede ser muy denso y puede obstruir poros, sin embargo, es muy hidratante.']
         },
         9:{
-            text: ['Exfoliantes que contengan ácido salicílico ayudan mucho con esta condición ya que disuelven el exceso de sebo. Por otro lado, la niacinamida ayuda a regular la producción de sebo, por lo que también es muy conveniente.';]
+            text: ['Exfoliantes que contengan ácido salicílico ayudan mucho con esta condición ya que disuelven el exceso de sebo. Por otro lado, la niacinamida ayuda a regular la producción de sebo, por lo que también es muy conveniente.']
         },
         10:{
             text: ['Cuando ocurre este tipo de condición, se recomienda usar ácido glicólico, pero este puede ser un poco irritante. Cómo alternativa está el ácido láctico. Un ingrediente que ayuda con la regeneración de la piel es el retinol, pero si vas a usarlo debes tener precaución.']
@@ -37,7 +37,7 @@ const messagesData = {
         },
         12:{
             moreThanOne: [' Ten cuidado al tratar varios productos, primero pruébalos por separado.']
-        }
+        },
     }
 }
 
