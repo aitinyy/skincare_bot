@@ -5,3 +5,8 @@ const messagesData = {
         }
     }
 }
+
+
+module.exports = {
+    messagesData
+}
