@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 //const webhookRoute = 
 var router = require('./routes/webhook_routes');
 
-app.use(router);
+app.use('/echo', router);
 
 app.listen(process.env.PORT || 8000, function(){
     console.log("Escuchando el puerto");
