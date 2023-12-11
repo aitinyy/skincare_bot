@@ -7,7 +7,7 @@ router.post("/", function(req, res){
     var speech = 'Caca';
     if(req.body.queryResult.parameters.startRoutine){
         speech = 'Hola';
-        response['fulfillmentText'] = message;
+        //response['fulfillmentText'] = message;
         return res.json({
                 "fulfillmentText": speech,
                 "fulfillmentMessages": [
