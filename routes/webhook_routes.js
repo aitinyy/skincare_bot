@@ -1,9 +1,9 @@
 const express = require('express');
 const router  = express.Router();
 
-const routineController = require('../controllers/skincare_routine');
+//const routineController = require('../controllers/skincare_routine');
 
-app.post("/echo", function(req, res){
+app.post("/", function(req, res){
     var speech = 'Caca';
     if(req.body.queryResult.parameters.startRoutine){
         speech = 'Hola';
@@ -34,6 +34,4 @@ app.post("/echo", function(req, res){
     });
 });
 
-module.exports = {
-    router
-};
+module.exports = router;
