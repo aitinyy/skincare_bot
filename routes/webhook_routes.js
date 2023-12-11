@@ -11,9 +11,12 @@ router.post("/", function(req, res){
     if(req.body.queryResult.parameters.startRoutine){
         routineController.resetValues(concerns, multipleConcerns, typeSkin);
         res = routineController.manageRoutine(req,res);
+    }else if(req.body.queryResult.parameters.removeMakeup){
+        //doble wash
+        res = routineController.washFace(req,res);
     }
 
-    
+
 });
 
 module.exports = router;
