@@ -1,10 +1,10 @@
 const express = require('express');
 const router  = express.Router();
 const routineController = require('../controllers/skincare_routine');
+const ingredientesController = require('../controllers/ingredientes');
 
 
 router.post("/", function(req, res){
-    
 
     if(req.body.queryResult.parameters.startRoutine){
         //empezar rutina
@@ -19,7 +19,6 @@ router.post("/", function(req, res){
         routineController.updateSkinType();
     }else if(req.body.queryResult.parameters.moreConcern){
         //continuacion para mas concerns
-        //res = routineController.moreConcerns();
         var speech = 'Más preocupaciones';
         var evento = 'SKIN_CONCERN';
 
@@ -44,6 +43,9 @@ router.post("/", function(req, res){
     }else if(req.body.queryResult.parameters.addSunscreen){
         //crema solar, fin rutina
         res = routineController.selectSunscreen(req, res);
+    }else if(req.body.queryResult.parameters.ingredients){
+        //zona de ingredientes
+        res = ingredientesController.manageIngredientsSection();
     }
 
 
