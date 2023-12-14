@@ -9,7 +9,7 @@ const messagesData = {
             button: ['¿Y si quiero tratar algo en concreto?']
         },
         3:{
-            text: ['Podrías añadir a tu rutina algún exfoliante que contenga ácido salicílico (BHA) y/o sérum que contenga niacinamida.']
+            text: ['Podrías añadir a tu rutina algún exfoliante que contenga ácido salicílico (BHA) y/o un sérum que contenga niacinamida.']
         },
         4:{
             text: ['Considera utilizar algún exfoliante AHA, cómo ácido glicólico (el más irritante pero más efectivo) o ácido láctico (punto intermedio) o ácido mandélico (el más suave pero menos efectivo).']
@@ -119,12 +119,12 @@ const messagesData = {
             text: ['El ácido succínico es un exfoliante que ayuda a las pieles con tendencia acneica y a la disminución de apariencia de poros. Además, es más suave que otros exfoliantes y por lo que es apto para pieles sensibles.']
         },
         18:{
-            text: ['Algunos de los tipos del alcohol pueden ser irritantantes para la piel como el alcohol denat, sobretodo para la gente con piel sensible.']
+            text: ['Algunos de los tipos del alcohol pueden ser irritantantes para la piel como el alcohol denat (alcohol desnaturalizado), sobretodo para la gente con piel sensible.']
         }
     },
     3:{
         1:{
-            text: ['La base se utiliza para tener un tono de piel unificado. Primero habría que preparar la piel con una hidratante y después un primer primer. Continuamos poniendo el producto en la parte posterior de la mano o en alguna otra superficie limpia. Con una esponja de maquillaje ligeramente húmeda, la llenamos de producto a toques. A continuación, hacemos lo mismo en la cara, a toques se va aplicando el maquillaje. Es importante desplazarse de forma uniforme por el rostro para que quede un tono unificado. Repetir hasta que esté cubierta toda la cara.']
+            text: ['La base se utiliza para tener un tono de piel unificado. Primero habría que preparar la piel con una hidratante y después un primer. Continuamos poniendo el producto en la parte posterior de la mano o en alguna otra superficie limpia. Con una esponja de maquillaje ligeramente húmeda, la llenamos de producto a toques. A continuación, hacemos lo mismo en la cara, a toques se va aplicando el maquillaje. Es importante desplazarse de forma uniforme por el rostro para que quede un tono unificado. Repetir hasta que esté cubierta toda la cara.']
         },
         2:{
             text: ['El primer se utiliza para preparar la piel. Se pone después de la crema hidratante. Ayudar a que el maquillaje dure y deja un textura lisa. Para empezar, se necesita un primer que trate algo que le convenga a tu tipo de piel. Se aplica como si fuera una crema.']
@@ -142,7 +142,7 @@ const messagesData = {
             text: ['Es un tipo de cobertor de la piel que contiene propiedades buenas para la piel. Tiene un poco de color y permite unificar el tono de forma ligera. Suele ser hidratante. Se aplica como si fuera una base. Se puede combinar con otros productos como el corrector o cualquier otro producto que se ocupe de realzar los rasgos faciales.']
         },
         7:{
-            text: ['Esta crema un poco de color y cubre bien, más que las BB creams. Suelen contener ingredientes de interés. Se recomiendo utilizar después de aplicar crema hidratante aunque puede sustituir a esta, preferencia personal. Se puede usar como una base y combinarla con otros productos.']
+            text: ['Esta crema da un poco de color y cubre bien, más que las BB creams. Suelen contener ingredientes de interés. Se recomiendo utilizar después de aplicar crema hidratante aunque puede sustituir a esta, preferencia personal. Se puede usar como una base y combinarla con otros productos.']
         },
         8:{
             text: ['Para sellar el maquillaje se pueden utilizar los polvos matificantes. Se aplican tras completar el maquillaje con un aplicador por todo el rostro. Se deja actuar un momento y se retira con una brocha grande. Otro método es con spray fijador, que tan sólo hay que aplicarlo al acabar el maquillaje.']
@@ -151,7 +151,7 @@ const messagesData = {
             text: ['Hay distintas formas de utilizar el colorete. Para empezar, el tono es gusto personal, pero la posición en la cara va a influir. Para un efecto lifting, se debe aplicar por arriba de los pómulos. Para hacer más pequeña la cara, se debe aplicar en medio de la mejilla.']
         },
         10:{
-            text: ['El bronceador se utiliza para esculpir el rostro. Debe de ser unos tonos más oscuros a tu piel y se necesita una brocha fina. Se puede usar bajo en los pómulos para marcarlos. En el puente de la nariz, dejando un hueco en medio, para una apariencia más pequeña. También en la parte superior la frente para hacerla más pequeña también. Y en el borde de la mandíbula para hacer la cara más pequeña. ']
+            text: ['Los polvos bronceadores se utilizan para esculpir el rostro. Debe de ser unos tonos más oscuros a tu piel y se necesita una brocha fina. Se puede usar bajo en los pómulos para marcarlos. En el puente de la nariz, dejando un hueco en medio, para una apariencia más pequeña. También en la parte superior la frente para hacerla más pequeña también. Y en el borde de la mandíbula para hacer la cara más pequeña. ']
         },
         11:{
             text: ['El iluminador se utiliza para realzar alguna parte de la cara. Se necesita una brocha pequeña con la que difuminar. Se puede utilizar en el centro de la nariz para hacerla más puntiaguda. También se puede poner en el puente de la nariz, haciendo una sutil línea y da la apariencia la nariz más pequeña. Se puede aplicar un poco en los labios para hacerlos más grandes. En la parte superior del pómulo da un look radiante.']
