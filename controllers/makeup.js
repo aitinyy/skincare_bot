@@ -36,10 +36,16 @@ const manageCoveringSkin = (req, res, makeupType) => {
         "fulfillmentText": speech,
         "fulfillmentMessages": [
             {
-                "text": {
-                    "text": [speech]
+                "payload": {
+                    "telegram": {
+                        "parse_mode":"Markdown",
+                        "text": speech
+                        
+                    }
+                    
+                },
+                "platform": "TELEGRAM"
                 }
-            }
         ],
         "source": "<webhookpn1>"
     });
